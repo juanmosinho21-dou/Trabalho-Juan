@@ -1,6 +1,6 @@
 
 install.packages("GetDFPData2")
-#--------------------ITAÚ-------------------
+#--------------------ITAÚ--------------------------
 library(GetDFPData2)
  Itaú <- get_dfp_data(
   companies_cvm_codes = 19348,
@@ -28,8 +28,37 @@ Patrimonio_Liquido <- Itaú[["DF Individual - Balanço Patrimonial Passivo"]] %>
 
 LL_PL <- inner_join(Lucro_Liquido, Patrimonio_Liquido, by = "DT_REFER")
 
-#------------------ROE - ITAÚ---------------------
 # Realizar a divisão e criar uma nova coluna
 ROE <- LL_PL %>%
   mutate(ROE = (Lucro_Liquido$VL_CONTA / Patrimonio_Liquido$VL_CONTA) * 100) %>%
   select(DT_REFER, ROE)
+
+#-----------------BRADESCO------------------------
+library(GetDFPData2)
+Bradesco <- get_dfp_data(
+  companies_cvm_codes = 906,
+  first_year = 2010,
+  last_year = c("BPA, BPP, DRE"),
+  type_format = c("con", "ind"),
+  clean_data = TRUE,
+  use_memoise = FALSE,
+  cache_folder = "gdfpd2_cache",
+  do_shiny_progress = FALSE
+)
+names(Bradesco)
+
+#-----------------BTG------------------------
+library(GetDFPData2)
+BTG <- get_dfp_data(
+  companies_cvm_codes = 22616,
+  first_year = 2010,
+  last_year = c("BPA, BPP, DRE"),
+  type_format = c("con", "ind"),
+  clean_data = TRUE,
+  use_memoise = FALSE,
+  cache_folder = "gdfpd2_cache",
+  do_shiny_progress = FALSE
+)
+names(BTG)
+
+
