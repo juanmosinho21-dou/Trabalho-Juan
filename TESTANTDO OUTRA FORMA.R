@@ -1,4 +1,4 @@
-
+library(GetDFPData2)
 library(dplyr)
 #------------------Puxando dados do Bancos-----------------
 #23 bancos trabalhados
@@ -66,5 +66,16 @@ ROE <- LL_PL %>%
 #----------------MARGEM FINANCEIRA----------------------------------------
 
 
+
+#atividade para sexta 
+#Encontrar os seguinte índices: o Retorno sobre ativos (ROA- Return on Assets), o Retorno sobre
+#o Patrimônio Líquido (ROE- Return on Equity), a Receita Líquida de Juros (NII- Net
+#Interest Income) e o Resultado Líquido de intermediação Financeira (NIM- Net interest
+#Margin)." "FAZER DADOS EM PAINEL"
+
+#Se possível
+#tamanho do banco (representada pelo total de
+#ativos), capitalização (medida pela razão patrimônio líquido sobre total de ativos- PLA), custos administrativos, 
+#liquidez e qualidade dos créditos."
 
 
