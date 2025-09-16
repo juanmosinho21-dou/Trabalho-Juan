@@ -76,9 +76,3 @@ ROE <- LL_PL %>%
 #ativos), capitalização (medida pela razão patrimônio líquido sobre total de ativos- PLA), custos administrativos, 
 #liquidez e qualidade dos créditos."
 
-git add Trabalho-Juan.Rproj
-git commit -m "Adiciona Trabalho-Juan.Rproj"
-git pull origin main
-git push origin main
-
-
