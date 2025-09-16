@@ -66,7 +66,6 @@ ROE <- LL_PL %>%
 #----------------MARGEM FINANCEIRA----------------------------------------
 
 
-
 #atividade para sexta 
 #Encontrar os seguinte índices: o Retorno sobre ativos (ROA- Return on Assets), o Retorno sobre
 #o Patrimônio Líquido (ROE- Return on Equity), a Receita Líquida de Juros (NII- Net
